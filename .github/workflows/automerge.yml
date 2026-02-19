@@ -50,7 +50,7 @@ jobs:
           dry-run: ${{ github.event_name == 'workflow_dispatch' }}
         if: github.event_name != 'pull_request_review'
       - name: Upload `event.json`
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         if: github.event_name == 'pull_request_review'
         with:
           name: event.json
